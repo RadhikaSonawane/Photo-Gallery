@@ -1,0 +1,300 @@
+*,
+*:before,
+*:after
+{
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+html 
+{
+  font-family: 'Dancing Script', cursive;
+  -ms-text-size-adjust: 100%; 
+  -webkit-text-size-adjust: 100%; 
+}
+
+body
+{
+  background-color: #BBB;
+  font-family: 'Dancing Script', cursive;
+  width: 100%;
+  text-align: center;
+}
+
+.title h1
+{
+  top: 5px;
+  left: 70px;
+  color:white;
+  font-family: 'Dancing Script', cursive;
+  font-size: 6rem;
+  font-weight: 400;
+  width: 100%;
+}
+
+.p1
+{
+  width: 100%;
+}
+
+.title
+{
+ padding-bottom: 20px;
+}
+
+.topnav 
+{
+  overflow: hidden;
+  background:linear-gradient(to bottom right, #7b4397, #dc2430);
+}
+
+@media screen and (max-width: 600px) 
+{
+  .topnav 
+  {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) 
+{
+  .topnav 
+  {
+    position: relative;
+  }
+  .topnav
+  {
+    width: 100%;
+  }
+} 
+
+.searchContainer
+{
+  border: none;
+  text-align: center;
+  margin: 80px;
+}
+
+.textbox 
+{
+  border: 0;
+  padding: 15px;
+  border-radius: 10px;
+  width: 70%;
+  outline: 0;
+  color:rgb(42, 41, 41);
+  font-family: 'Dancing Script', cursive;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.searchButton
+{
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 10px;
+  margin: 20px;
+  background:rgb(211, 44, 114);
+  color: #fff ;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+  letter-spacing: 1px;
+}
+
+.searchButton:hover 
+{
+  background: #ebf1f17c;
+  text-decoration: none;
+}
+
+.selected 
+{
+  border: 5px solid #000000;
+  opacity: 0.2;
+}  
+
+.allImagesContainer
+{
+  box-sizing: border-box;
+  display: block;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-top: 0.35em;
+  padding-bottom: 0.625em;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  margin-left:100px;
+  margin-right: 80px;
+}
+
+.all-Images img
+{
+  float: left;
+  max-width:100%; 
+  width:100px;
+  height:80px;
+  background-size: cover;
+  box-shadow: 5px 10px 15px;
+  margin:60px;
+  transform: scale(2.0);
+}
+
+.all-Images
+{
+  text-align: center;
+  margin: 5px;
+  float: left;
+  width: 100%;
+  margin-left: 30px;
+  margin-bottom: 50px;
+}
+
+.all-Images img:hover 
+{
+  z-index: 2;
+  -webkit-transition: all 300ms ease-in;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-transform: scale(2.5);
+  -ms-transition: all 300ms ease-in;
+  -ms-transform: scale(1.5);
+  -moz-transition: all 300ms ease-in;
+  -moz-transform: scale(2.5);
+  transition: all 300ms ease-in;
+  transform: scale(2.1);
+  box-shadow: 0px 0px 150px #000000;
+}
+
+.seeImg
+{
+  color:rgb(82, 81, 81);
+}
+
+.viewGalleryButton
+{
+  text-align: center;
+  margin-bottom: 50px;
+  background:rgb(211, 44, 114);
+  color: #fff ;
+  padding: 10px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 18px;
+}
+
+.galleryContainer
+{
+  margin-left:100px;
+  margin-right: 80px;
+}
+
+.flickrImageClass
+{
+  float: left;
+  max-width:100%; 
+  height:auto;
+  background-size: cover;
+  box-shadow: 5px 10px 15px;
+  margin:60px;
+  transform: scale(2.0);
+}
+
+.modal 
+{
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.9); 
+}
+
+#myImg 
+{
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover 
+{
+  opacity: 0.7;
+}
+
+.modal-content 
+{
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+.modal-content, #caption 
+{    
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom 
+{
+  from 
+  {
+    -webkit-transform:scale(0)
+  } 
+  to 
+  {
+    -webkit-transform:scale(1)
+  }
+}
+
+@keyframes zoom 
+{
+  from 
+  {
+    transform:scale(0)
+  } 
+  to 
+  {
+    transform:scale(1)
+  }
+}
+
+.close 
+{
+  position: absolute;
+  top: 40px;
+  right: 22%;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus 
+{
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 700px)
+{
+  .modal-content 
+  {
+      width: 100%;
+  }
+}

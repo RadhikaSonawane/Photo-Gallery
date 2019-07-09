@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>FLICKR Gallery</title>		
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://img.icons8.com/nolan/64/000000/camera.png">
+	</head>
+  <body>
+      <!-- Title -->
+      <div class="p1" id="p1">         
+        <div class="topnav" id="myTopnav">
+          <div class="title">
+            <h1>Flickr Photo Gallery</h1>
+          </div>   
+        </div> 
+      </div>	
+      <div id="searchContainer" class="searchContainer">
+          <input type="text" class="textbox" name="searchBox" id="searchBox" placeholder="Search category here eg. flowers, Dogs.." required onkeypress="onEnterKey(event);" />
+          <input type="submit" class="searchButton" id="clickMe" value="Search Images" onClick="getPhotos();"/>
+      </div> 
+      <!-- Images Container -->
+      <div class="all-Images">
+        <div id="allImagesContainer" class="allImagesContainer"></div>
+      </div> 
+      <!-- Images Gallery -->
+      <div class="view">
+        <h3 class="seeImg">Please select images for the gallery </h3>
+        <input type="submit" id="viewGalleryButton" class="viewGalleryButton" value="View in Gallery" onClick="showGallery();"/>
+        <div id="galleryContainer" class="galleryContainer"></div>	
+      </div>
+    <!--large Image-->
+      <div id="largeImage" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="img01">
+      </div>	
+      <!-- Our custom JS code -->
+      <script src="js/script.js"></script>
+  </body>
+</html>
